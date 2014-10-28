@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src='../wyliodrin.js'></script>
+</head>
+<body>
+	<b>Open Message</b><br>
+	Communication Token <input type="text" id="communication_token_open"><br>
+	Label <input type="text" id="label_open"><br>
+	Message <input type="text" id="message_open"><br>
+	<input type="button" id="sendopen" value="Send">
+	<hr>
+	<b>Message</a><br>
+	Communication Token <input type="text" id="communication_token"><br>
+	Board ID <input type="text" id="gadgetid"><br>
+	Label <input type="text" id="label"><br>
+	Message <input type="text" id="message"><br>
+	<input type="button" id="send" value="Send">
+<script>
+console.log ($.wyliodrin);
+$("#sendopen").click (function ()
+{
+	var communication_token = $('#communication_token_open').val();
+	var label = $('#label_open').val();
+	var message = $('#message_open').val();
+	$.wyliodrin.sendOpenMessage (communication_token, label, message);
+});
+
+$("#send").click (function ()
+{
+	var communication_token = $('#communication_token').val();
+	var gadgetid = $('#gadgetid').val();
+	var label = $('#label').val();
+	var message = $('#message').val();
+	$.wyliodrin.sendMessage (communication_token, gadgetid, label, message);
+});
+</script>
+
+</body>
+
+</html>
