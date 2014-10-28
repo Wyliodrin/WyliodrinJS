@@ -2,7 +2,7 @@
 
 (function ( $ ) {
  
- 	var WYLIO_ADDRESS = "https://www.wyliodrin.org/";
+ 	var WYLIO_ADDRESS = "https://www.wyliodrin.com/";
 
  	var jsonRequestGet = function (url, done)
 	{
